@@ -9,8 +9,8 @@ async function encryptData(data) {
         return hashedData;
     } catch (error) {
         console.log(error)
+        throw Error('couldn\'t encrypt data');
     }
-    return '500';
 }
 
 async function verifyData(plainData, encryptedData) {
@@ -24,8 +24,6 @@ async function verifyData(plainData, encryptedData) {
     }
     return false;
 }
-
-
 
 module.exports = {
     encryptData, verifyData
