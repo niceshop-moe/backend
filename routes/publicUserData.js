@@ -10,6 +10,11 @@ const publicUserDataHandler = function (app) {
             return data;
         });
 
+        if(userdata === null) {
+            res.sendStatus(418);
+            return;
+        }
+
         const response = {
             "username": userdata.username,
             "surname": userdata.surname,
