@@ -13,6 +13,7 @@ app.use(function (req, res, next) {
 });
 
 require('./routes/accounts')(app);
+require('./routes/publicUserData')(app);
 
 mongoose.connect(mongodb.mdbConnectURL, {
     useNewUrlParser: true,

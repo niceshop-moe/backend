@@ -21,8 +21,22 @@ const userSchema = new Schema({
     surname: {
         type: String,
         required: true
+    },
+    token: {
+        type: String,
+        required: true
+    },
+    avatarUrl: {
+        type: String,
+        required: false
+    },
+    bio: {
+        type: String,
+        required: false
     }
-}, {timestamps: true})
+}, {
+    timestamps: true
+})
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;
